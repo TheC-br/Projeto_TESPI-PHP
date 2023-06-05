@@ -36,18 +36,18 @@ header {
 
 .input {
     
-    font-size: 20PX;
-    width:400px;
-    height:30px;
+    font-size: 25PX;
+    width:430px;
+    height:35px;
     margin:0 auto;
     color: #150430;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 
 .texto {
     
-    font-size: 25PX;
+    font-size: 30PX;
     color: #150430;
     
 }
