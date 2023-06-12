@@ -33,22 +33,21 @@
 
     require_once "conexao01.php";
 
-// Recebe os dados do formulário com a variável $_POST 
+// Recebe os dados do formulï¿½rio com a variï¿½vel $_POST 
 $nome = $_POST['nome']; 
 $endereco = $_POST['endereco']; 
-$sexo = $_POST['sexo']; 
-$faixa = $_POST['faixa']; 
 $cidade = $_POST['cidade']; 
- 
+$faixa = $_POST['faixa']; 
+$sexo = $_POST['sexo'];
   
-  //conexÃ£o e seleção do banco de dados 
+  //conexÃ£o e seleï¿½ï¿½o do banco de dados 
   $con = novaConexao();
 
    
   //executa a consulta 
-   
-  $query  =  "INSERT  INTO  cliente  (nome,  endereco,  sexo,  faixa, 
-cidade) VALUES ('$nome','$endereco','$sexo','$faixa','$cidade')"; 
+  
+  $query  =  "INSERT  INTO  cliente  (nome,  endereco,  cidade,  faixa, 
+sexo) VALUES ('$nome','$endereco','$cidade','$faixa','$sexo')"; 
   
   $insert = mysqli_query($con,$query); 
    
@@ -57,8 +56,8 @@ cidade) VALUES ('$nome','$endereco','$sexo','$faixa','$cidade')";
         }else{ 
           echo"Erro"; 
     } 
-//Exibe os dados na página de resposta: RespForm1.php 
-echo utf8_encode("Os dados recebidos do formulário são: <p>"); 
+//Exibe os dados na pï¿½gina de resposta: RespForm1.php 
+echo utf8_encode("Os dados recebidos do formulï¿½rio sï¿½o: <p>"); 
 
 
 
@@ -70,20 +69,20 @@ echo (    "
   <td width = '300'>$nome</td> 
   </tr> 
   <tr> 
-  <td width = '100'>Endereço :<td>
+  <td width = '100'>Endereï¿½o :<td>
   <td width = '300'>$endereco</td> 
-  </tr> 
-  <tr> 
-  <td width = '100'>Sexo :<td> 
-  <td width = '300'>$sexo</td> 
-  </tr> 
-  <tr> 
-  <td width = '100'>Faixa etária :<td> 
-  <td width = '300'>$faixa</td> 
   </tr> 
   <tr> 
   <td width = '100'>Cidade :<td> 
   <td width = '300'>$cidade</td> 
+  </tr> 
+  <tr> 
+  <td width = '100'>Faixa etï¿½ria :<td> 
+  <td width = '300'>$faixa</td> 
+  </tr> 
+  <tr> 
+  <td width = '100'>Sexo :<td> 
+  <td width = '300'>$sexo</td> 
   </tr> 
   </table> 
  "); 
